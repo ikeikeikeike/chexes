@@ -43,7 +43,7 @@ end
 
 defimpl Chexes, for: Map do
   alias Chexes
-  def blank?(map) when map_size(map) > 0, do: true
+  def blank?(map) when map_size(map) <= 0, do: true
   def blank?(_),      do: false
   def present?(data), do: not Chexes.blank?(data)
 end
