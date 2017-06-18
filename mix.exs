@@ -33,7 +33,12 @@ defmodule Chexes.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:credo, "~> 0.8", only: :dev},
+      {:earmark, "~> 1.2", only: :dev},
+      {:ex_doc, "~> 0.16", only: :dev},
+      {:inch_ex, ">= 0.0.0",  only: :docs},
+    ]
   end
 
   defp package do
